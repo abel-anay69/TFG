@@ -10,6 +10,7 @@ public class Manager : MonoBehaviour
     public GameObject Ganar;
     public GameObject Jugador;
     public GameObject Enemigo;
+    public GameObject ConexionBotones;
     public static bool gameOver = false;
     public static bool start = false;
     public static bool victory = false;
