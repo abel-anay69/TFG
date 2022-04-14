@@ -23,6 +23,7 @@ public class NetworkManager : MonoBehaviour
         yield return w;
 
         response(JsonUtility.FromJson<Response>(w.text) );
+        //no se para que coño sirve esto
 
     }   
 }
