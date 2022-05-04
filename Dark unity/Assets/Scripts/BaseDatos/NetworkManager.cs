@@ -7,7 +7,7 @@ public class NetworkManager : MonoBehaviour
 {
     public void CrearUsuario(string NombreUsuario, string Password, Action<Response> response)
     {
-
+        StartCoroutine( CO_CrearUsuario(NombreUsuario, Password, response));
     }
 
     private IEnumerator CO_CrearUsuario(string NombreUsuario, string Password, Action<Response> response)
@@ -23,7 +23,7 @@ public class NetworkManager : MonoBehaviour
         yield return w;
 
         response(JsonUtility.FromJson<Response>(w.text) );
-        //no se para que coño sirve esto
+        
 
     }   
 }

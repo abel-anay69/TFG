@@ -1679,8 +1679,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 207120850}
   m_TextComponent: {fileID: 99119776}
   m_Placeholder: {fileID: 346102361}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -3312,6 +3312,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_registroUI: {fileID: 358726024}
   m_loginUI: {fileID: 220621309}
+  m_text: {fileID: 0}
+  m_nombreUsuarioInput: {fileID: 0}
+  m_password: {fileID: 0}
+  m_reEnterPassword: {fileID: 0}
 --- !u!1 &590663905
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,7 +5669,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &927011938
 Transform:
   m_ObjectHideFlags: 0
@@ -12545,8 +12549,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1629493848}
   m_TextComponent: {fileID: 332229912}
   m_Placeholder: {fileID: 501211896}
-  m_ContentType: 0
-  m_InputType: 0
+  m_ContentType: 7
+  m_InputType: 2
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
@@ -14669,7 +14673,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1955223130
 MonoBehaviour:
   m_ObjectHideFlags: 0
