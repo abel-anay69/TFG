@@ -17,7 +17,7 @@ public class NetworkManager : MonoBehaviour
         form.AddField("NombreUsuario", NombreUsuario);
         form.AddField("Password", Password);
 
-        WWW w = new WWW("http://localhost/Juego/CrearUsuario.php", form);
+        WWW w = new WWW("http://localhost/juego/crearUsuario.php", form);
 
         //El codigo no ve la respuesta instanteneamente, asi que ponemos un yield para poder esperar
         yield return w;

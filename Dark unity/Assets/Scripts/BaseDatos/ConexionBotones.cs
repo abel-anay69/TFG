@@ -40,7 +40,7 @@ public class ConexionBotones : MonoBehaviour
       }
       else
       {
-          m_text.text = "Las contraseñas no son iguales, vuelva a introducirla";
+          m_text.text = "Las contraseñas no coinciden, vuelva a introducirla";
       }
    }
 
