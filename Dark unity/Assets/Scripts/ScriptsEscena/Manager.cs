@@ -20,7 +20,7 @@ public class Manager : MonoBehaviour
     {
         
 
-        // S�lo para el comienzo
+        // Solo para el comienzo
         if (start == false)
         {
             
@@ -44,7 +44,7 @@ public class Manager : MonoBehaviour
             victory = true;
         }
 
-        // Cuando ganamos, cargamos el men� de victoria
+        // Cuando ganamos, cargamos el menu de victoria
         if (victory == true)
         {
             
@@ -57,7 +57,7 @@ public class Manager : MonoBehaviour
             }
         }
 
-        // Cuando perdemos, cargamos el men� de Game Over
+        // Cuando perdemos, cargamos el menu de Game Over
         if (gameOver == true)
         {
             AudioManager.instance.PlayAudio(AudioManager.instance.muerte);
