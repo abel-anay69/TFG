@@ -15,11 +15,11 @@ C:/Users/JAMBO/Desktop/TFG/TFG/Dark unity
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49634
+63926
 Successfully changed project path to: C:/Users/JAMBO/Desktop/TFG/TFG/Dark unity
 C:/Users/JAMBO/Desktop/TFG/TFG/Dark unity
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 42.06 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 36.31 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,72 +35,72 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56612
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Registered in 0.001830 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 37.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.949 seconds
+- Completed reload, in  0.954 seconds
 Domain Reload Profiling:
-	ReloadAssembly (950ms)
-		BeginReloadAssembly (48ms)
+	ReloadAssembly (954ms)
+		BeginReloadAssembly (47ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (341ms)
-			LoadAssemblies (46ms)
+		EndReloadAssembly (350ms)
+			LoadAssemblies (45ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (123ms)
+			SetupTypeCache (122ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (134ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (144ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (34ms)
-				BeforeProcessingInitializeOnLoad (7ms)
-				ProcessInitializeOnLoadAttributes (66ms)
-				ProcessInitializeOnLoadMethodAttributes (23ms)
+				RefreshPlugins (38ms)
+				BeforeProcessingInitializeOnLoad (8ms)
+				ProcessInitializeOnLoadAttributes (70ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002939 seconds.
+Registered in 0.003121 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 32.07 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.928 seconds
+- Completed reload, in  0.889 seconds
 Domain Reload Profiling:
-	ReloadAssembly (928ms)
-		BeginReloadAssembly (118ms)
+	ReloadAssembly (890ms)
+		BeginReloadAssembly (122ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (760ms)
-			LoadAssemblies (72ms)
+		EndReloadAssembly (717ms)
+			LoadAssemblies (76ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (246ms)
+			SetupTypeCache (232ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (288ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (276ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (35ms)
-				BeforeProcessingInitializeOnLoad (56ms)
-				ProcessInitializeOnLoadAttributes (177ms)
+				RefreshPlugins (32ms)
+				BeforeProcessingInitializeOnLoad (54ms)
+				ProcessInitializeOnLoadAttributes (170ms)
 				ProcessInitializeOnLoadMethodAttributes (10ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
@@ -109,7 +109,7 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
 Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2117 Unused Serialized files (Serialized files now loaded: 0)
@@ -117,7 +117,7 @@ System memory in use before: 95.9 MB.
 System memory in use after: 96.0 MB.
 
 Unloading 26 unused Assets to reduce memory usage. Loaded Objects now: 2560.
-Total: 2.672400 ms (FindLiveObjects: 0.147300 ms CreateObjectMapping: 0.059000 ms MarkObjects: 2.406600 ms  DeleteObjects: 0.058900 ms)
+Total: 2.907200 ms (FindLiveObjects: 0.176500 ms CreateObjectMapping: 0.058000 ms MarkObjects: 2.615700 ms  DeleteObjects: 0.056500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -131,49 +131,32 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Art/Pallete/Palette.prefab
-  artifactKey: Guid(2ac28f7558e79c74da3193eb43bc0336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Pallete/Palette.prefab using Guid(2ac28f7558e79c74da3193eb43bc0336) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd93d5af2b7f58e912b8c8f6b9bc3bff4') in 0.087929 seconds 
-  Import took 0.090977 seconds .
+  path: Assets/Fonst/Kemco Pixel Bold.ttf
+  artifactKey: Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonst/Kemco Pixel Bold.ttf using Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a5bc63502af4aa43d5d0f1797884883') in 0.093772 seconds 
+  Import took 0.096551 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.624642 seconds.
-  path: Assets/Art/2D Pixel Item Pack/Heavy Outline
-  artifactKey: Guid(2aa009d155f61f441acb7b54f5a8fe80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/2D Pixel Item Pack/Heavy Outline using Guid(2aa009d155f61f441acb7b54f5a8fe80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '471a48e901096ed506df4dc8739462c5') in 0.005910 seconds 
-  Import took 0.008744 seconds .
+  Time since last request: 17.478578 seconds.
+  path: Assets/Fonst/Kemco Pixel Bold.ttf
+  artifactKey: Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonst/Kemco Pixel Bold.ttf using Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4eb9d52eb698d82b63b544bedab1a4ae') in 0.015030 seconds 
+  Import took 0.018023 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.002874 seconds.
-  path: Assets/Art/2D Pixel Item Pack/Heavy Outline
-  artifactKey: Guid(2aa009d155f61f441acb7b54f5a8fe80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/2D Pixel Item Pack/Heavy Outline using Guid(2aa009d155f61f441acb7b54f5a8fe80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '471a48e901096ed506df4dc8739462c5') in 0.002394 seconds 
-  Import took 0.005685 seconds .
+  Time since last request: 6.147612 seconds.
+  path: Assets/Fonst/Kemco Pixel Bold.ttf
+  artifactKey: Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonst/Kemco Pixel Bold.ttf using Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54c232704b9ce52879e3b572dfca8c5f') in 0.017349 seconds 
+  Import took 0.021476 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.070652 seconds.
-  path: Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_CoinGold_00.png
-  artifactKey: Guid(b7169c21225b1f04ab520fd934e0cd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_CoinGold_00.png using Guid(b7169c21225b1f04ab520fd934e0cd2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1f740aa265a069a495eb2194935c1d3') in 0.053266 seconds 
-  Import took 0.056052 seconds .
+  Time since last request: 38.534761 seconds.
+  path: Assets/Fonst/Kemco Pixel Bold.ttf
+  artifactKey: Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonst/Kemco Pixel Bold.ttf using Guid(e5e0b493a3d5f444f87c4d3f38daa139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7260eb398c104ccac92f7f0cfc50c8c1') in 0.015671 seconds 
+  Import took 0.018953 seconds .
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000301 seconds.
-  path: Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_HeartRed_00.png
-  artifactKey: Guid(15cc575b0d9a36846838578bfb080819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_HeartRed_00.png using Guid(15cc575b0d9a36846838578bfb080819) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02a9743fe50c0d71af3a2922de0a773b') in 0.016166 seconds 
-  Import took 0.018729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000242 seconds.
-  path: Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_PotionRed_00.png
-  artifactKey: Guid(2f605f8487435b64780f2f663cc01c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/2D Pixel Item Pack/Heavy Outline/S_ItemHeavyOutline_PotionRed_00.png using Guid(2f605f8487435b64780f2f663cc01c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '503d04fd0a83828cda8ebf246d12223f') in 0.012617 seconds 
-  Import took 0.015644 seconds .
-
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file

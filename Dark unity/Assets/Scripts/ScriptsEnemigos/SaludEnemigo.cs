@@ -41,7 +41,7 @@ public class SaludEnemigo : MonoBehaviour
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 AudioManager.instance.PlayAudio(AudioManager.instance.kill);
 
-                Destroy(gameObject);
+                Destroy(this.gameObject);
             }
         }
     }
