@@ -142,5 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe1af1ca58400d843a90a7ed3da80c2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valor: 1
+  valor: 5
   contadorPuntos: {fileID: 0}
+  sonidoMoneda: {fileID: 8300000, guid: 2974be69f339b29429117c3e03f9e41d, type: 3}

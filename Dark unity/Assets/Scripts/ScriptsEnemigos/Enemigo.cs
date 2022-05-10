@@ -11,5 +11,5 @@ public class Enemigo : MonoBehaviour
     public float knockbackX;
     public float knockbackY;
     public float damage;
-    
+    public int puntos;
 }

@@ -57,6 +57,18 @@ public class Vida : MonoBehaviour
             }
         }
 
+        if(collision.CompareTag("Cura") && vida < 100 && !Inmune)
+        {
+            vida += 5;
+            vidaImg.fillAmount += 5;
+        }
+
+        if(collision.CompareTag("Cura") && vida == 100 && !Inmune)
+        {
+            vida += 0;
+            vidaImg.fillAmount += 0;
+        }
+
         
     }
 

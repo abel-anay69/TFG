@@ -7,6 +7,7 @@ public class SaludEnemigo : MonoBehaviour
     Enemigo enemy;
     public GameObject efectoMuerte;
     public bool isDamaged;
+    public ContadorPuntos contadorPuntos;
     SpriteRenderer sprite;
     Blink material;
     Rigidbody2D rd;
@@ -40,8 +41,8 @@ public class SaludEnemigo : MonoBehaviour
             {
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 AudioManager.instance.PlayAudio(AudioManager.instance.kill);
-
                 Destroy(this.gameObject);
+                contadorPuntos.SumarPuntos(enemy.puntos);
             }
         }
     }

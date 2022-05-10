@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Arma
   - enemigo
+  - Cura
   layers:
   - Default
   - TransparentFX

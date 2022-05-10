@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Moneda : MonoBehaviour
 {
-    public int valor = 1;
+    public int valor = 5;
     public ContadorPuntos contadorPuntos;
+    public AudioClip sonidoMoneda;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,10 +25,13 @@ public class Moneda : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            contadorPuntos.SumarPuntos(valor);
             Destroy(this.gameObject);
+            contadorPuntos.SumarPuntos(valor);
+            AudioManagerMonedas.Instance.ReproducirSonido(sonidoMoneda);
         }
         
     }
+
+    
 }
 
