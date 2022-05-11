@@ -6,6 +6,7 @@ public class Corazon : MonoBehaviour
 {
     public int valor = 2;
     public ContadorPuntos contadorPuntos;
+    public AudioClip sonidoCorazon;
     
     // Start is called before the first frame update
     void Start()
@@ -23,8 +24,9 @@ public class Corazon : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-             contadorPuntos.SumarPuntos(valor);
+            contadorPuntos.SumarPuntos(valor);
             Destroy(this.gameObject);
+            AudioManagerMonedas.Instance.ReproducirSonido(sonidoCorazon);
         }
         
     }

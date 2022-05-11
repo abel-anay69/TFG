@@ -122,3 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35d0ae462fadb464db641e06734dabbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  valor: 2
+  contadorPuntos: {fileID: 0}
+  sonidoCorazon: {fileID: 8300000, guid: cf0fb6e083b7cad4197f1fbda4946986, type: 3}
