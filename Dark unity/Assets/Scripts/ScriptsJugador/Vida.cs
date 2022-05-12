@@ -69,6 +69,18 @@ public class Vida : MonoBehaviour
             vidaImg.fillAmount += 0;
         }
 
+        if(collision.CompareTag("Pocion") && vida < 100 && !Inmune)
+        {
+            vida += 50;
+            vidaImg.fillAmount += 50;
+        }
+
+        if(collision.CompareTag("Pocion") && vida == 100 && !Inmune)
+        {
+            vida += 0;
+            vidaImg.fillAmount += 0;
+        }
+
         
     }
 
