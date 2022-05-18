@@ -7,11 +7,13 @@ public class pocion : MonoBehaviour
     public int valor = 4;
     public ContadorPuntos contadorPuntos;
     public AudioClip sonidoPocion;
+
+    private bool estaColisionando;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        estaColisionando = false;
     }
 
     // Update is called once per frame
@@ -24,9 +26,11 @@ public class pocion : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
-            contadorPuntos.SumarPuntos(valor);
+            if(estaColisionando) return;
+            estaColisionando = true;
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoPocion);
+            contadorPuntos.SumarPuntos(valor);
         }
         
     }

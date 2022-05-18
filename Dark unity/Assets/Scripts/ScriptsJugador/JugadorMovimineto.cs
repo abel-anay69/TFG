@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JugadorMovimineto : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class JugadorMovimineto : MonoBehaviour
     Animator anim;
     public float knockbackX;
     public float knockbackY;
+    public static JugadorMovimineto instance;
     
 
     // Start is called before the first frame update

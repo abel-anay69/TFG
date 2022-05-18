@@ -7,6 +7,8 @@ public class Moneda : MonoBehaviour
     public int valor = 5;
     public ContadorPuntos contadorPuntos;
     public AudioClip sonidoMoneda;
+
+    private bool estaColisionando;
     
 
     // Start is called before the first frame update
@@ -18,16 +20,18 @@ public class Moneda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        estaColisionando = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
+            if(estaColisionando) return;
+            estaColisionando = true;
             Destroy(this.gameObject);
-            contadorPuntos.SumarPuntos(valor);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoMoneda);
+            contadorPuntos.SumarPuntos(valor);
         }
         
     }
