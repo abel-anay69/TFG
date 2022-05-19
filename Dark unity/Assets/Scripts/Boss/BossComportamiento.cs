@@ -16,8 +16,8 @@ public class BossComportamiento : MonoBehaviour
 
     private void Start()
     {
-        var initialPosition = Random.Range(0, transforms.Length);
-        transform.position = transforms[initialPosition].position;
+        var posicionInicial = Random.Range(0, transforms.Length);
+        transform.position = transforms[posicionInicial].position;
         //Esto lo que hara sera que cuando pasemos por el RigidBody y el jefe se active
         //aparecera en una de las 4 posiciones que tiene asignadas de forma aleatoria
         countDown = tiempoDisparo;
@@ -42,7 +42,7 @@ public class BossComportamiento : MonoBehaviour
             Teletransporte();
         }
 
-        if(countDownTP <= 0f)
+        if(countDownTP <= 0)
         {
             countDownTP = tiempoTP;
             Teletransporte();
@@ -57,8 +57,8 @@ public class BossComportamiento : MonoBehaviour
 
     public void Teletransporte()
     {
-        var initialPosition = Random.Range(0, transforms.Length);
-        transform.position = transforms[initialPosition].position;
+        var posicionInicial = Random.Range(0, transforms.Length);
+        transform.position = transforms[posicionInicial].position;
     }
 
     public void DamageBoss()
