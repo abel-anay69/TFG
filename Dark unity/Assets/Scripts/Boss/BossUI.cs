@@ -10,6 +10,7 @@ public class BossUI : MonoBehaviour
     
     public static BossUI instance;
 
+
     private void Awake()
     {
         if(instance == null)
@@ -29,5 +30,11 @@ public class BossUI : MonoBehaviour
     {
         bossPanel.SetActive(true);
         muros.SetActive(true);
+    }
+
+    public void DesactivarBoss()
+    {
+        bossPanel.SetActive(false);
+        muros.SetActive(false);
     }
 }
