@@ -22,12 +22,19 @@ public class ActivacionBoss : MonoBehaviour
         }
     }
 
-    /*IEnumerator WaitBoss()
+    /*IEnumerator WaitBoss() //Este metodo hace que el jugador no se pueda mover mientras aparece el jefe
     {
         var currentSpeed = JugadorMovimineto.instance.speed;
+        var currentJumpForce = JugadorMovimineto.instance.jumpForce;
+        
+        JugadorMovimineto.instance.jumpForce = 0;
         JugadorMovimineto.instance.speed = 0f;
-        yield return new WaitForSeconds(3f); //Esto hace que el jugador no se pueda mover mientras aparece el jefe
+        
+
+        yield return new WaitForSeconds(2); 
+        
         JugadorMovimineto.instance.speed = currentSpeed;
+        JugadorMovimineto.instance.jumpForce = currentJumpForce;
         Destroy(gameObject);
     }*/
 }

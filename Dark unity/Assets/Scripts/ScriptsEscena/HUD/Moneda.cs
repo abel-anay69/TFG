@@ -32,6 +32,7 @@ public class Moneda : MonoBehaviour
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoMoneda);
             contadorPuntos.SumarPuntos(valor);
+            
         }
         
     }

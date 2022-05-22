@@ -35,6 +35,18 @@ public class BossUI : MonoBehaviour
     public void DesactivarBoss()
     {
         bossPanel.SetActive(false);
-        muros.SetActive(false);
+        StartCoroutine(BossDerrotado());
+    }
+
+    IEnumerator BossDerrotado()
+    {
+        var velocity = JugadorMovimineto.instance.GetComponent<Rigidbody2D>().velocity;
+
+        Vector2 originalSpeed = velocity;
+        velocity = new Vector2(0, velocity.y);
+        JugadorMovimineto.instance.enabled = false;
+        yield return new WaitForSeconds(5);
+        JugadorMovimineto.instance.enabled = true;
+        velocity = originalSpeed;
     }
 }

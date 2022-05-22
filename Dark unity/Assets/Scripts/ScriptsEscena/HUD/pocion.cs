@@ -31,6 +31,7 @@ public class pocion : MonoBehaviour
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoPocion);
             contadorPuntos.SumarPuntos(valor);
+            
         }
         
     }

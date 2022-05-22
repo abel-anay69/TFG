@@ -15,9 +15,16 @@ public class JugadorMovimineto : MonoBehaviour
     public float knockbackX;
     public float knockbackY;
     public static JugadorMovimineto instance;
-    public static JugadorMovimineto target;
     
 
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {

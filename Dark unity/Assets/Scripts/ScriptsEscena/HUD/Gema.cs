@@ -31,6 +31,7 @@ public class Gema : MonoBehaviour
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoGema);
             contadorPuntos.SumarPuntos(valor);
+            
         }
         
     }
