@@ -7,6 +7,7 @@ public class BossUI : MonoBehaviour
 {
     public GameObject bossPanel;
     public GameObject muros;
+    public GameObject ganarImg;
     
     public static BossUI instance;
 
@@ -24,6 +25,7 @@ public class BossUI : MonoBehaviour
     {
         bossPanel.SetActive(false);
         muros.SetActive(false);
+        ganarImg.SetActive(false);
     }
 
     public void ActivarBoss() //Al pasar por el RigidBody aparecera tanto el jefe como los muros para bloquear el camino
@@ -35,6 +37,8 @@ public class BossUI : MonoBehaviour
     public void DesactivarBoss()
     {
         bossPanel.SetActive(false);
+
+        
         StartCoroutine(BossDerrotado());
     }
 
@@ -48,5 +52,17 @@ public class BossUI : MonoBehaviour
         yield return new WaitForSeconds(5);
         JugadorMovimineto.instance.enabled = true;
         velocity = originalSpeed;
+        StartCoroutine(ResetPanel());  
+    }
+
+    IEnumerator ResetPanel()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        AudioManager.instance.fondo.Stop();
+        AudioManager.instance.PlayAudio(AudioManager.instance.victoria);
+
+        Time.timeScale = 0;
+        ganarImg.SetActive(true);
     }
 }

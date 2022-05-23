@@ -5,18 +5,35 @@ using UnityEngine.UI;
 
 public class Vida : MonoBehaviour
 {
-
     public float vida;
-    public GameObject efectoMuerte;
     public float maxVida;
+
+    public static Vida instance;
+
     bool Inmune;
+
     Blink material;
+
     SpriteRenderer sprite;
+
     public Image vidaImg; 
+
+    public GameObject efectoMuerte;
+    public GameObject gameOverImg;
+
+    public void Awake() 
+    {
+        if (instance == null) 
+        {
+            instance = this;
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
     {
+        gameOverImg.SetActive(false);
         sprite = GetComponent<SpriteRenderer>();
         material = GetComponent<Blink>();
         vida = maxVida;
@@ -38,7 +55,7 @@ public class Vida : MonoBehaviour
         vida += num;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) 
+    public void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.CompareTag("enemigo") && !Inmune) 
         {
@@ -52,8 +69,14 @@ public class Vida : MonoBehaviour
                 vidaImg.fillAmount = vida = 0;
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 Destroy(gameObject);
-                AudioManager.instance.PlayAudio(AudioManager.instance.muerte);
 
+                AudioManager.instance.fondo.Stop();
+                AudioManager.instance.PlayAudio(AudioManager.instance.muerte);
+                
+                Time.timeScale = 0;
+                gameOverImg.SetActive(true);
+
+                StartCoroutine(ResetPanel());
             }
         }
 
@@ -91,6 +114,13 @@ public class Vida : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Inmune = false;
         sprite.material = material.original;
+    }
+
+    IEnumerator ResetPanel() //Este "contador" nos sirve para cuando le demos al menu principal y volver a jugar el juego vuelva a empezar
+    {
+        gameOverImg.SetActive(true);
+        yield return new WaitForSeconds(3);
+        gameOverImg.SetActive(false);
     }
 
     

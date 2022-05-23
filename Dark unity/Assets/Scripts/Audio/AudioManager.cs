@@ -6,7 +6,7 @@ using UnityEngine.Audio;
 public class AudioManager : MonoBehaviour
 {
     public AudioMixer Musica, Efectos;
-    public AudioSource hit, kill, jump, fondo, muerte, herido;
+    public AudioSource hit, kill, jump, fondo, muerte, herido, victoria;
 
     public static AudioManager instance;
 

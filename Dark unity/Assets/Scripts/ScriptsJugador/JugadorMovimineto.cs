@@ -8,6 +8,7 @@ public class JugadorMovimineto : MonoBehaviour
 
     public float speed, jumpForce;
     float velX, velY;
+
     private Rigidbody2D rigidbody2D; 
     private float Horizontal;
     private bool Grounded;
