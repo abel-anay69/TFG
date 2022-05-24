@@ -11803,7 +11803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: Jefe
-  puntosVida: 1
+  puntosVida: 25
   speed: 3
   knockbackX: 0
   knockbackY: 0
@@ -11931,7 +11931,7 @@ MonoBehaviour:
   recarga: 0
   tiempoTP: 3
   countDownTP: 0
-  bossVida: 30
+  bossVida: 25
   vidaActual: 0
   vidaImg: {fileID: 1408990164}
 --- !u!1001 &772185198
