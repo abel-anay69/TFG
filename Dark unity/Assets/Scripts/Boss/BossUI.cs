@@ -46,23 +46,24 @@ public class BossUI : MonoBehaviour
     {
         var velocity = JugadorMovimineto.instance.GetComponent<Rigidbody2D>().velocity;
 
+        AudioManager.instance.fondo.Stop();
+        AudioManager.instance.PlayAudio(AudioManager.instance.victoria);
         Vector2 originalSpeed = velocity;
         velocity = new Vector2(0, velocity.y);
         JugadorMovimineto.instance.enabled = false;
         yield return new WaitForSeconds(5);
         JugadorMovimineto.instance.enabled = true;
         velocity = originalSpeed;
+        
         StartCoroutine(ResetPanel());  
     }
 
     IEnumerator ResetPanel()
     {
         yield return new WaitForSeconds(0.5f);
-
-        AudioManager.instance.fondo.Stop();
-        AudioManager.instance.PlayAudio(AudioManager.instance.victoria);
-
+        
         Time.timeScale = 0;
+        AudioManager.instance.hit.Stop();
         ganarImg.SetActive(true);
     }
 }
