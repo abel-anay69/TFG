@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 442}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 3083
+  controlID: 4617
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 201, y: 442}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 3089
+  controlID: 4553
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_MinSize: {x: 276, y: 342}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 3084
+  controlID: 4548
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -434,9 +434,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 526.6883, y: 758.3368, z: -1419.9015}
+    m_Target: {x: 46.158962, y: -2.0114446, z: -1483.2711}
     speed: 2
-    m_Value: {x: 526.6883, y: 758.3368, z: -1419.9015}
+    m_Value: {x: 46.158962, y: -2.0114446, z: -1483.2711}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -487,9 +487,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 800.306
+    m_Target: 1.7526886
     speed: 2
-    m_Value: 800.306
+    m_Value: 1.7526886
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 17092
+  m_LastSelectedObjectID: 17756
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -819,22 +819,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Escena
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 72
   m_LastFolders:
-  - Assets/Art/Escena
+  - Assets/Scenes
   m_LastFoldersGridSize: 72
   m_LastProjectPath: C:\Users\JAMBO\Desktop\TFG\TFG\Dark unity
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 06470000
-    m_LastClickedID: 18182
-    m_ExpandedIDs: 00000000e4460000e6460000e8460000ea460000ec46000000ca9a3b
+    m_SelectedIDs: 0e470000
+    m_LastClickedID: 18190
+    m_ExpandedIDs: 00000000ea460000ec460000ee460000f046000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -862,7 +862,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e4460000e6460000e8460000ea46000000ca9a3b
+    m_ExpandedIDs: 00000000ea460000ec460000ee460000f046000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1119,9 +1119,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 78470000
       m_LastClickedID: 0
-      m_ExpandedIDs: 42fbffffa4430000504500005c450000
+      m_ExpandedIDs: 9e9fffffb6b8ffffd4baffff42fbffff66c50000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 

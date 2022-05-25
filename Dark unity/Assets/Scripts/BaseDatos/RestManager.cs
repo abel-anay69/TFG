@@ -65,7 +65,7 @@ public class RestManager : MonoBehaviour
                 }
 
                 infoText.text += "Nombre: " +puntuacion["nombreUsuario"] +"/";
-                infoText.text += "Puntos: " +puntuacion["puntos"] +"\n" +"\n" +"\n";
+                infoText.text += "Puntos: " +puntuacion["puntos"] +"\n" +"\n";
             }
 
             infoText.text += "El usuario con mas puntos es " +id["nombreUsuario"] +" con " + id["puntos"];
