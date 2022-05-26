@@ -34,7 +34,7 @@ public class RestManager : MonoBehaviour
 
     
 
-    public IEnumerator GetRanking()
+    public IEnumerator GetRanking() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
     {
         //infoText.text = "Cargando datos...";
         UnityWebRequest www = UnityWebRequest.Get("http://192.168.136.1:8080/usuarios");
@@ -44,7 +44,7 @@ public class RestManager : MonoBehaviour
 
         if(www.isNetworkError || www.isHttpError)
         {
-            Debug.Log(www.error);
+            Debug.Log(www.error); //Aparecera dicho mensaje alguna o las dos condiciones de arriba se cumplen
         }
         else
         {
@@ -56,19 +56,16 @@ public class RestManager : MonoBehaviour
             
             foreach(JSONNode puntuacion in data)
             {
-                
-                
                 if(id["puntos"] < puntuacion["puntos"])
                 {
                     id = puntuacion;
-
                 }
 
                 infoText.text += "Nombre: " +puntuacion["nombreUsuario"] +"/";
                 infoText.text += "Puntos: " +puntuacion["puntos"] +"\n" +"\n";
             }
 
-            infoText.text += "El usuario con mas puntos es " +id["nombreUsuario"] +" con " + id["puntos"];
+            infoText.text += "El usuario con mas puntos es " +id["nombreUsuario"] +" con " + id["puntos"] +" puntos";
         }
 
     }
