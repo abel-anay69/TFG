@@ -5,26 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
+    public static MenuPrincipal instance;
+
+    private void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         Time.timeScale = 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void BotonLogin()
     {
+
+        Login.instance.BotonPulsado();
         SceneManager.LoadScene(1);// Poedmos poner tanto el nombre de la escena como el numero que tiene asignado en "Build Settings"
         
     }
 
     public void BotonRegistro()
     {
+        Registro.instance.BotonPulsado();
         SceneManager.LoadScene(1);
     }
 

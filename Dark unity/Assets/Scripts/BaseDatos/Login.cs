@@ -14,6 +14,9 @@ public class Login : MonoBehaviour
 
     string nombreUsuario;
     string password;
+    int puntos;
+
+
 
     //public string nombreUsuario;
     //public string password;
@@ -30,45 +33,16 @@ public class Login : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void BotonPulsado()
     {
-        StartCoroutine(GetLogin());
-        
+        StartCoroutine(LoginClick());
     }
 
-    void update()
+    public IEnumerator LoginClick()
     {
-        //StartCoroutine(GetLogin());
-    }
-
-
-    /*public IEnumerator GetInfo() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
-    {
-        //infoText.text = "Cargando datos...";
-        UnityWebRequest www = UnityWebRequest.Get("http://192.168.136.1:8080/usuarios/");
+        Debug.Log(usuario.text +contra.text);
         
-        yield return www.SendWebRequest();
-        
-
-        if(www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.error); //Aparecera dicho mensaje alguna o las dos condiciones de arriba se cumplen
-        }
-        else
-        {
-            Debug.Log(www.downloadHandler.text); //Muestra el resultado como texto
-        }
-        
-        StartCoroutine(GetLogin());
-
-        
-    }*/
-
-
-    public IEnumerator GetLogin()
-    {
-        if(usuario.text == string.Empty && contra.text == string.Empty)
+        if(usuario.text == "" && contra.text == "")
         {
            
             Debug.Log("Rellena los campos");
@@ -76,15 +50,28 @@ public class Login : MonoBehaviour
         else
         {
             
-            
-            UnityWebRequest www = UnityWebRequest.Get("http://192.168.136.1:8080/usuarios/" +usuario +"/" +contra);
+            UnityWebRequest www = UnityWebRequest.Get($"http://192.168.136.1:8080/usuarios/{usuario.text}/{contra.text}");
             
             yield return www.SendWebRequest();
 
             Debug.Log(www.downloadHandler.text);
 
-        }    
-    }
+            
 
-    
+            JSONNode data = JSON.Parse(www.downloadHandler.text);
+
+            if(data)
+            {
+                nombreUsuario = data["nombreUsuario"];
+                password = data["password"];
+                puntos = data["puntos"];
+
+                Debug.Log(nombreUsuario +" " +password +" " +puntos);
+            }
+            else
+            {
+                Debug.Log("El usuario no existe, intentelo otra vez");
+            }
+        }    
+    } 
 }

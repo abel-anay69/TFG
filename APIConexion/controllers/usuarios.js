@@ -101,12 +101,12 @@ exports.update = (req, res) => {
 }
 
 exports.delete = (req, res) => {
-    var code = req.params.nombreUsuario;
+    var code = req.params.id;
 
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;
         var dbo = db.db("DarkUnity");
-        dbo.collection("usuarios").deleteOne({nombreUsuario:code}, (err, result) => {
+        dbo.collection("usuarios").deleteOne({_id:code}, (err, result) => {
             if (err) throw err;
             console.log(result);
             db.close();

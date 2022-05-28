@@ -8,57 +8,55 @@ using SimpleJSON;
 public class Registro : MonoBehaviour
 {
 
+    public static Registro instance;
+    
     public InputField nombreUsuario;
     public InputField password;
 
-    public Text mensaje;
+    string _id = "fgf";
+    string punto = "0";
 
 
-    string _id = "fdsfsd";
-    int puntos = 0;
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void BotonPulsado() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
+    {
+        StartCoroutine(Post(_id, nombreUsuario.text, password.text, punto));
         
     }
 
-
-    public void BotonRegistro() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
+    public IEnumerator Post(string id, string usuario, string contra, string punto)
     {
         if(nombreUsuario.text == string.Empty && password.text == string.Empty)
         {
-           
-            Debug.Log("Hasta los huevos");
+            Debug.Log("Rellena los campos");
         }
         else
         {
-            StartCoroutine(Post(_id, nombreUsuario.text, password.text, puntos));
-            Debug.Log("de locos");
-        }   
-    }
+            List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
+            wwwForm.Add(new MultipartFormDataSection("id", id));
+            wwwForm.Add(new MultipartFormDataSection("nombreUsuario", usuario));
+            wwwForm.Add(new MultipartFormDataSection("password", contra));
+            wwwForm.Add(new MultipartFormDataSection("puntos", punto));
 
-    public IEnumerator Post(string id, string usuario, string contra, int punto)
-    {
-        List<IMultipartFormSection> wwwForm = new List<IMultipartFormSection>();
-        wwwForm.Add(new MultipartFormDataSection("_id", id));
-        wwwForm.Add(new MultipartFormDataSection("nombreUsuario", usuario));
-        wwwForm.Add(new MultipartFormDataSection("password", contra));
-        wwwForm.Add(new MultipartFormDataSection("puntos", punto.ToString()));
+            UnityWebRequest www = UnityWebRequest.Post("http://192.168.136.1:8080/usuarios", wwwForm);
 
-        UnityWebRequest www = UnityWebRequest.Post("http://192.168.136.1:8080/usuarios", wwwForm);
+            yield return www.SendWebRequest();
 
-        yield return www.SendWebRequest();
-
-        if(www.isNetworkError || www.isHttpError)
-        {
-            Debug.Log(www.error); //Aparecera dicho mensaje alguna o las dos condiciones de arriba se cumplen
-        }
-
-        else
-        {
-            Debug.Log("De locos pa");
-        }
+            if(www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error); //Aparecera dicho mensaje alguna o las dos condiciones de arriba se cumplen
+            }
+            else
+            {
+                Debug.Log("Usuario creado");
+            }   
+        }  
     }
 }

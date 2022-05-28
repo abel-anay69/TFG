@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
 using SimpleJSON;
-//using Json.Net;
 
 public class RestManager : MonoBehaviour
 {
