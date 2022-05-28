@@ -22,7 +22,7 @@ public class RestManager : MonoBehaviour
         }
         else
         {
-            Destroy(this);
+            //Destroy(this);
         }
     }
     
@@ -32,12 +32,10 @@ public class RestManager : MonoBehaviour
         StartCoroutine(GetRanking());
     }
 
-    
-
     public IEnumerator GetRanking() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
     {
         //infoText.text = "Cargando datos...";
-        UnityWebRequest www = UnityWebRequest.Get("http://192.168.136.1:8080/usuarios");
+        UnityWebRequest www = UnityWebRequest.Get("http://192.168.136.1:8080/usuarios/");
         
         yield return www.SendWebRequest();
         
@@ -65,7 +63,7 @@ public class RestManager : MonoBehaviour
                 infoText.text += "Puntos: " +puntuacion["puntos"] +"\n" +"\n";
             }
 
-            infoText.text += "El usuario con mas puntos es " +id["nombreUsuario"] +" con " + id["puntos"] +" puntos";
+            infoText.text += "El usuario con mas puntos es " +id["nombreUsuario"] +" con " + id["puntos"] +" puntos.";
         }
 
     }
