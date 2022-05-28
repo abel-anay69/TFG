@@ -1,0 +1,7 @@
+Para que el juego funcione correcectamente tendreis que cambiar las rutas
+de las IPs de los script por la de vuestro equipo.
+
+- RestManager.cs (línea 37)
+- Login.cs (línea 48)
+- Registro (línea 48)
+

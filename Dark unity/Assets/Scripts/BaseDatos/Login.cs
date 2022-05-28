@@ -16,11 +16,6 @@ public class Login : MonoBehaviour
     string password;
     int puntos;
 
-
-
-    //public string nombreUsuario;
-    //public string password;
-
     private void Awake()
     {
         if(instance == null)
@@ -55,8 +50,6 @@ public class Login : MonoBehaviour
             yield return www.SendWebRequest();
 
             Debug.Log(www.downloadHandler.text);
-
-            
 
             JSONNode data = JSON.Parse(www.downloadHandler.text);
 

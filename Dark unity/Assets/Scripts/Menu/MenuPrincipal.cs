@@ -29,6 +29,11 @@ public class MenuPrincipal : MonoBehaviour
         
     }
 
+    public void ModoLocal()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     public void BotonRegistro()
     {
         Registro.instance.BotonPulsado();
