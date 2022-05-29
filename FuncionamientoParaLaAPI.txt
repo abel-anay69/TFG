@@ -5,3 +5,6 @@ de las IPs de los script por la de vuestro equipo.
 - Login.cs (línea 48)
 - Registro (línea 48)
 
+También tendran que escribir en la terminal de Visual Studio: 
+
+npx nodemon app
