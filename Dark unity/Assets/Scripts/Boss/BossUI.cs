@@ -11,7 +11,6 @@ public class BossUI : MonoBehaviour
     
     public static BossUI instance;
 
-
     private void Awake()
     {
         if(instance == null)

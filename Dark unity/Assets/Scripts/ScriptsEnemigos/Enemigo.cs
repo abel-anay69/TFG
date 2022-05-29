@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemigo : MonoBehaviour
 {
-
     public string enemyName;
     public float puntosVida;
     public float speed;

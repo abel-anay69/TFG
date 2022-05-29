@@ -9,13 +9,6 @@ public class Moneda : MonoBehaviour
     public AudioClip sonidoMoneda;
 
     private bool estaColisionando;
-    
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,11 +25,7 @@ public class Moneda : MonoBehaviour
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoMoneda);
             contadorPuntos.SumarPuntos(valor);
-            
-        }
-        
-    }
-
-    
+        } 
+    }  
 }
 

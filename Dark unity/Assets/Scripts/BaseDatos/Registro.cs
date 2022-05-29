@@ -25,7 +25,7 @@ public class Registro : MonoBehaviour
         }
     }
 
-    public void BotonPulsado() // Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
+    public void BotonPulsado() //Obtenemos los datos de todos los usuarios pero nosotros solo mostraremos nombre y puntos
     {
         StartCoroutine(Post(_id, nombreUsuario.text, password.text, punto));
         

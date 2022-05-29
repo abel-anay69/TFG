@@ -29,7 +29,6 @@ public class Vida : MonoBehaviour
         }
     }
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +47,6 @@ public class Vida : MonoBehaviour
         {
             vida = maxVida;
         }
-
     }
 
     public void subirVida (float num) {
@@ -65,7 +63,6 @@ public class Vida : MonoBehaviour
 
             if (vida <= 0)
             {
-
                 vidaImg.fillAmount = vida = 0;
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 Destroy(gameObject);
@@ -103,8 +100,6 @@ public class Vida : MonoBehaviour
             vida += 0;
             vidaImg.fillAmount += 0;
         }
-
-        
     }
 
     IEnumerator Inmunidad() 
@@ -122,6 +117,4 @@ public class Vida : MonoBehaviour
         yield return new WaitForSeconds(3);
         gameOverImg.SetActive(false);
     }
-
-    
 }

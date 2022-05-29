@@ -9,12 +9,6 @@ public class Corazon : MonoBehaviour
     public AudioClip sonidoCorazon;
 
     private bool estaColisionando;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -17,7 +17,7 @@ exports.get = (req, res) => {
     })
 }
 
-// LOGIN DE PRUEBA
+// LOGIN
 exports.log = (req, res) => {
     MongoClient.connect(url, (err, db) => {
         var code = req.params.nombreUsuario;
@@ -54,6 +54,7 @@ exports.list = (req, res) => {
     })
 }
 
+//REGISTRO
 exports.add = (req, res) => {
     MongoClient.connect(url, (err, db) => {
         if (err) throw err;

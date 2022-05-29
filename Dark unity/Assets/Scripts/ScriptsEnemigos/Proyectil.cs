@@ -31,8 +31,6 @@ public class Proyectil : MonoBehaviour
             }
         }
 
-        
-
         if(watcher)
         {
 
@@ -41,17 +39,17 @@ public class Proyectil : MonoBehaviour
 
     public void Disparo()
     {
-            GameObject fuego = Instantiate(proyectil, transform.position, Quaternion.identity);
+        GameObject fuego = Instantiate(proyectil, transform.position, Quaternion.identity);
             
-            if(transform.localScale.x < 0)
-            {
-                fuego.GetComponent<Rigidbody2D>().AddForce(new Vector2(300f, 0f), ForceMode2D.Force);
-            }
-            else
-            {
-                fuego.GetComponent<Rigidbody2D>().AddForce(new Vector2(-300f, 0f), ForceMode2D.Force);
-            }
+        if(transform.localScale.x < 0)
+        {
+            fuego.GetComponent<Rigidbody2D>().AddForce(new Vector2(300f, 0f), ForceMode2D.Force);
+        }
+        else
+        {
+            fuego.GetComponent<Rigidbody2D>().AddForce(new Vector2(-300f, 0f), ForceMode2D.Force);
+        }
 
-            shootCoolDown = tiempoDisparo;
+        shootCoolDown = tiempoDisparo;
     }
 }

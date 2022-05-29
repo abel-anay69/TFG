@@ -9,17 +9,11 @@ public class pocion : MonoBehaviour
     public AudioClip sonidoPocion;
 
     private bool estaColisionando;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        estaColisionando = false;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        estaColisionando = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,8 +25,6 @@ public class pocion : MonoBehaviour
             Destroy(this.gameObject);
             AudioManagerMonedas.Instance.ReproducirSonido(sonidoPocion);
             contadorPuntos.SumarPuntos(valor);
-            
-        }
-        
+        } 
     }
 }

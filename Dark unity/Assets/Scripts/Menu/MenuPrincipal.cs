@@ -23,10 +23,8 @@ public class MenuPrincipal : MonoBehaviour
 
     public void BotonLogin()
     {
-
         Login.instance.BotonPulsado();
-        SceneManager.LoadScene(1);// Poedmos poner tanto el nombre de la escena como el numero que tiene asignado en "Build Settings"
-        
+        SceneManager.LoadScene(1);// Poedmos poner tanto el nombre de la escena como el numero que tiene asignado en "Build Settings"   
     }
 
     public void ModoLocal()
